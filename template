@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -e "please provide filename \c"
+read -r file
+touch /root/scripts/$file.sh
+chmod 777 /root/scripts/$file.sh
+echo '#!/bin/bash' > /root/scripts/$file.sh
+echo '#Purpose' >> /root/scripts/$file.sh
+echo '#verison:' >> /root/scripts/$file.sh
+echo '#create date:' `date` >> /root/scripts/$file.sh
+echo '#author: madhan' >> /root/scripts/$file.sh
+echo '#START#' >> /root/scripts/$file.sh
+echo '#END#' >> /root/scripts/$file.sh
