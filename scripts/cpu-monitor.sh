@@ -15,6 +15,6 @@ LOGFILE=/var/log/cputil/cpusage-`date +%h%d%y`.log
 touch $LOGFILE
 for path in $PATH
 do 
-	CPULOAD=`top -b -n 2 -dl | grep "cpu(s)" |tail -nl |awk `{print $2}` |awk -F '{print $1}'
+	CPULOAD= `top -b -n 2 -d1 | grep "Cpu(s)" | tail -n1 | awk '{print $2}'| awk -F. '{print $1}'`
 
 #END#
